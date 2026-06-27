@@ -53,4 +53,19 @@ print(fibonacci(5))
     
 #Parece que para esto de la recursividad primero tenemor que encontrar los excedentes.
 
+print("Ultimo ")
+def fibonachi(numero):
+    if numero<=0:
+        return 0
+    
+    elif numero==1:
+        return 0
+    
+    elif numero ==2:
+        return 1
+    
+    else:
+        return fibonachi(numero-1)+fibonachi(numero-2)
 
+
+print(fibonachi(5))
