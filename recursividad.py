@@ -69,3 +69,62 @@ def fibonachi(numero):
 
 
 print(fibonachi(5))
+
+
+# problema 3: Crea una función recursiva que reciba un número n y devuelva la suma de todos los números desde 1 hasta n.
+print("Problema 3")
+def sum(numero):
+
+    if numero==0:
+        return 0
+    elif numero==1:
+        return 1
+    
+    else:
+        return numero + sum(numero-1)
+    
+
+print(sum(5))
+
+#Crea una función recursiva que sume todos los dígitos de un número.
+def sum_digitos(numero):
+    ultimo=numero%10
+    if numero<=9:
+        return numero
+    else:
+        return ultimo+sum_digitos(numero//10)
+    
+    
+print(sum_digitos(91))
+
+
+#Crea una función recursiva que imprima los números desde n hasta 1.
+print("#Crea una función recursiva que imprima los números desde n hasta 1.")
+def atras(numero):
+    if numero==1:
+        print(numero)
+    elif numero==2:
+        print(numero)
+        print(numero-1)
+    else:
+        print(numero)
+        atras(numero-1)
+
+atras(10)
+
+#Recibe un número y un dígito, y devuelve cuántas veces aparece.
+print("#Recibe un número y un dígito, y devuelve cuántas veces aparece.")
+
+def conteo(buscar,numero_total):
+    if numero_total==0:
+        return 0
+
+    elif numero_total%10==buscar:
+        return 1 + conteo(buscar,numero_total//10)
+    
+    else:
+        return conteo(buscar,numero_total//10)
+
+
+print(conteo(1,1112323))
+
