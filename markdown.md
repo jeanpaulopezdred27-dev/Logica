@@ -13,3 +13,5 @@ _texto con dos barras bajas_
 ***Texto con negritas y cursivas***
 
 | Esto debe de estar oculto
+
+Esta es una frase con esta **palabra** en negrita.
