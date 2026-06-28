@@ -20,4 +20,4 @@ Esta es una frase con esta **palabra** en negrita.
 
 Esta es la oracion que tiene una ***palabra*** en cursiva y negrita
 
-Crea un subÃ­ndice H<sub>2<sub>O
+Crea un subÃ­ndice H<sub>2</sub>O
