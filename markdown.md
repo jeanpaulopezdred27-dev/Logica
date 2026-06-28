@@ -11,3 +11,5 @@ texto normal
 _texto con dos barras bajas_
 
 ***Texto con negritas y cursivas***
+
+| Esto debe de estar oculto
