@@ -26,7 +26,7 @@ Crea un subÃ­ndice H<sup>2</sup>O
 
 [Ir a Instagram de Rompedistintos](https://www.instagram.com/rompedistintos/reels/)
 
-[venado](https://www.instagram.com/p/DZvWenbgr5w/?img_index=1)
+![](https://www.instagram.com/p/DZvWenbgr5w/?img_index=1)
 
 > Esto es una cita de dos 
 > lineas
