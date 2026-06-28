@@ -28,12 +28,12 @@ Crea un subÃ­ndice H<sup>2</sup>O
 
 imagen de gato
 
-![](WhatsApp Image 2026-06-13 at 3.10.24 PM)
-> Esto es una cita de dos 
-> lineas
+![](super.jpg.jpeg)
+>Esto es una cita de dos 
+>lineas
 
 > **Crea una lista con puntos:**
-> -Este es el primer punto
-> -Este es el segundo punto
-> -Este es el tercer punto
+>- Este es el primer punto
+>- Este es el segundo punto
+>- Este es el tercer punto
 
