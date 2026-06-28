@@ -8,10 +8,12 @@
 
 texto normal
 
-_texto con dos barras bajas_
+_texto con las barras de inicio y final son cursivas_
 
-***Texto con negritas y cursivas***
+***Pon una palabra en negrita y cursiva a la vez***
 
 | Esto debe de estar oculto
 
 Esta es una frase con esta **palabra** en negrita.
+
+<ins>Esta oracion debe de estar subrayada.</ins>
