@@ -8,6 +8,6 @@
 
 texto normal
 
-__texto con dos barras bajas__
+_texto con dos barras bajas_
 
 ***Texto con negritas y cursivas***
