@@ -10,4 +10,4 @@ texto normal
 
 __texto con dos barras bajas__
 
-*** Texto con negritas y cursivas ***
+**Texto con negritas y cursivas**
