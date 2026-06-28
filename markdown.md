@@ -26,9 +26,8 @@ Crea un subÃ­ndice H<sup>2</sup>O
 
 [Ir a Instagram de Rompedistintos](https://www.instagram.com/rompedistintos/reels/)
 
-imagen de gato
-
-![](super.jpg.jpeg)
+Esta imagen tiene que estar en la misma carpeta donde tienes los ficheros.
+![](super.jpg.jpeg) 
 >Esto es una cita de dos 
 >lineas
 
@@ -37,3 +36,8 @@ imagen de gato
 >- Este es el segundo punto
 >- Este es el tercer punto
 
+1. Lista de numeros
+2. lista de numeros 2
+3. Lista de numeros 3
+
+"print("Hola que tal")"
