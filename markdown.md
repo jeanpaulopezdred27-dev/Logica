@@ -25,9 +25,10 @@ Crea un subÃ­ndice H<sub>2</sub>O
 Crea un subÃ­ndice H<sup>2</sup>O
 
 [Ir a Instagram de Rompedistintos](https://www.instagram.com/rompedistintos/reels/)
+
 imagen de gato
 
-![Gato](https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg)
+![](WhatsApp Image 2026-06-13 at 3.10.24 PM)
 > Esto es una cita de dos 
 > lineas
 
