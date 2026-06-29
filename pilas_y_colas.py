@@ -51,7 +51,6 @@ def aplicativo():
         else:
             print("Estas en la pagina de inicio")
        
-aplicativo()
 
 def impresora():
     cola_de_impresion=[]
@@ -83,12 +82,46 @@ def impresora():
         else:
             print("Ingrsa un valor valido por favor.")
 
-impresora()
+
+
+"""
+ Utilizando la implementación de cola y cadenas de texto, simula el mecanismo de una
+ *   impresora compartida que recibe documentos y los imprime cuando así se le indica.
+ *   La palabra "imprimir" imprime un elemento de la cola, el resto de palabras se
+ *   interpretan como nombres de documentos.
+ """
+
+
+def impre():
+    cola_impresion=[]
+    while True:
+        que_hacer=input("Que quieres hacer\nImprimir(i) o enviar archivo(e)")
+
+        
+        if que_hacer=="i":
+            if len(cola_impresion)==0:
+                print("nO hay nada pendiente a imprimir")
+            else: 
+                print(f"Se esta imprimiendo {cola_impresion[0]}")
+                cola_impresion.pop(0)
+                print(cola_impresion)
+
+        elif que_hacer=="e":
+            agregar=input("Ingresa el nombre del documento que esta enviando: ")
+            print(f"El documento ({agregar} se agrego a la cola. )")
+            cola_impresion.append(agregar)
+            print(f"La cola actual de impresion es: {cola_impresion}")
+
+        elif que_hacer=="s":
+            print("Procedemos a salir del app de la impresora... ")
+            break
+        else:
+            print(f"La variable {que_hacer} no es valida, por favor ingresa una valida.")
 
 
 
 
-
+impre()
 
 
 
