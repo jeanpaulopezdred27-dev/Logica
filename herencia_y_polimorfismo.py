@@ -12,3 +12,39 @@
  * Dependiendo de su labor, tienen propiedades y funciones exclusivas de su
  * actividad, y almacenan los empleados a su cargo.
  """
+class Animal:
+
+    def __init__(self,name):
+        self.name=name
+
+    def sound(self):
+        pass
+
+class Perro(Animal):
+    def sound(self):
+        print(f"El perro hace woof")
+
+
+class Gato(Animal):
+    def sound(self):
+        print("El gato hace miau")
+
+
+animal=Animal("Animal")
+animal.sound()
+perro=Perro("Perro")
+perro.sound()
+gato=Gato("Gato")
+gato.sound()
+
+#Esto en sintesis es herencia 
+
+#Ester es un ehemplo de polimorfismo
+print("Polimorfismo")
+def print_sound(animal:Animal):
+    animal.sound()
+
+perro=Perro("Perro")
+print_sound(perro)
+
+print_sound(gato)

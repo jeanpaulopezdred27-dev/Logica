@@ -41,7 +41,7 @@ programador.impresion()
 #inicializarse y disponer de operaciones para añadir, eliminar,
 #retornar el número de elementos e imprimir todo su contenido.
 
-class Pila():
+class Cola():
     def __init__(self):
         self.lista=[]
 
@@ -49,16 +49,24 @@ class Pila():
         self.lista.append(elemento)
 
     def eliminar(self):
-        self.lista.pop(0)
+        if len(self.lista)==0:
+            print("No hay elementos")
+        else:
+            salida=self.lista[0]
+            self.lista.pop(0)
+            return salida
     
     def retornar(self):
-        print(len(self.lista))
+        return f"Tienes {len(self.lista)} elementos en tu lista "
     
     def imprimir(self):
-        print(self.lista)
+        if len(self.lista)==0:
+            print("No tienes nada en tu lista de pendientes.")
+        else:
+            print(f"Los elementos de la lista son :{self.lista}")
     
 
-pila=Pila()
+pila=Cola()
 
 pila.añadir("Elemento 1")
 pila.añadir("Elemento 2")
@@ -71,3 +79,27 @@ pila.retornar()
 pila.imprimir()
 
 
+class Pilas():
+    
+    def __init__(self):
+        self.lista=[]
+
+    def añadir(self,elemento):
+        self.lista.append(elemento)
+
+    def eliminar(self):
+        if len(self.lista)==0:
+            print("No hay elementos")
+        else:
+            salida=self.lista[len(self.lista)-1]
+            self.lista.pop()
+            return salida
+    
+    def retornar(self):
+        return len(self.lista)
+    
+    def imprimir(self):
+        if len(self.lista)==0:
+            print("No tienes nada en tu lista de pendientes.")
+        else:
+            print(f"Los elementos de la lista son :{self.lista}")
