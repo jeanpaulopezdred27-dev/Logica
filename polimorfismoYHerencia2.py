@@ -61,7 +61,7 @@ class Doctor(Personal):
 
     def agregar(self,names):
         self.lista.append(names)
-        print(f"El paciente: {names} fue agregado correctamente a la lista de pacientes del doctor: {self.name}")
+        print(f"El paciente: {names} fue agrrgado correctamente a la lista de pacientes del doctor: {self.name}")
 
     def lista_pendientes(self):
         index=1
@@ -107,7 +107,7 @@ class Administrador(Personal):
             print(f"El administrador {self.name} trabaja en la especialidad de {self.name_especialidad}")
 
     def agregar(self):
-        print(f"Solo los doctores pueden ingresar nuevos pacientes a las listas.")
+        print(f"Solo los doctores pueden agendar o agregar pacientes a la lista de espera.")
     
 
 print("Enfermero")
@@ -138,9 +138,107 @@ administrador1.trabajar()
 administrador1.especialidad("Cardiologia")
 administrador1.trabajar()
 
+"""
+Crea un sistema de personajes en un juego.
+
+Clase base: Personaje
+nombre, nivel
+Subclases:
+Guerrero → fuerza
+Mago → mana
+Arquero → precisión
+
+🔧 Requisitos:
+
+Método atacar() distinto para cada clase.
+Método subir_nivel() que funcione diferente según el personaje.
+Crear una lista de personajes y ejecutar ataques (polimorfismo).
+"""
+
+class Personaje:
+    def __init__(self,name,nivel,vida):
+        self.name=name
+        self.nivel=nivel
+        self.vida=vida
+
+    def atacar(self):
+        pass
+
+    def subir_nivel(self):
+        pass
+
+    def recibir_daño(self, daño):
+        self.vida-=daño
+        
+        if self.vida<0:
+            self.vida=0
+    
+    def subir_nivel(self):
+        self.nivel+=1
+
+    
+class Guerrero(Personaje):
+
+    def __init__(self, name, nivel, vida,fuerza):
+        super().__init__(name, nivel, vida)
+        self.fuerza=fuerza
+
+   
+
+    def atacar(self):
+        daño=self.fuerza
+        return daño
+    
+    def subir_nivel(self):
+        self.fuerza+=10
+        super().subir_nivel()
+    
+    
+        
+
+class Mago(Personaje):
+    def __init__(self, name, nivel, vida,magia):
+        super().__init__(name, nivel, vida)
+        self.magia=magia
+
+   
+
+    def atacar(self):
+        daño=self.magia
+        return daño
+    
+    def subir_nivel(self):
+        self.magia+=12
+        super().subir_nivel()
+    
+
+class Arquero(Personaje):
+    def __init__(self, name, nivel, vida,presicion):
+        super().__init__(name, nivel, vida)
+        self.presicion=presicion
+
+   
+
+    def atacar(self):
+        daño=self.presicion
+        return daño
+    
+    def subir_nivel(self):
+        self.presicion+=13
+        super().subir_nivel()
+    
+
+
+    
 
 
 
+
+        
+    
+
+
+        
 
 
 
