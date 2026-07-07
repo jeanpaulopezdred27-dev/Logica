@@ -228,8 +228,130 @@ class Arquero(Personaje):
         super().subir_nivel()
     
 
+#Problema dos tienda virtual
+
+class Producto:
+
+    def __init__(self,nombre,precio,stock):
+        self.nombre=nombre
+        self.precio=precio
+        self.stock=stock
+
+    def precio_final(self):
+        pass
+
+
+class Electrodomestico(Producto):
+    
+    def precio_final(self):
+        #Agregaremos una garantia por el 10% del valor del producto
+        garantia=self.precio/10
+        new_precio=self.precio+garantia
+        print(f"El nuevo precio incluyendo la garantia es {new_precio}")
+
+
+class Ropa(Producto):
+
+    def precio_final(self):
+        #Haremos un descuento del 15%
+        descuento= self.precio/100 *15
+        new_precio=self.precio - descuento
+        print(f"El nuevo precio con el descuento de ropa es de {new_precio}")
+
+class Alimento(Producto):
+
+    def precio_final(self):
+        #Agregaremos el valor del impuesto que en mi pais es del 18%
+        impuesto=self.precio/100 *18
+        new_precio=self.precio + impuesto
+        print(f"El precio con los impuestos agregados es de {new_precio}")
+        
+    
+# Problema 8 con sistema escolar
+
+class Persona:
+    
+    def __init__(self, nombre,id):
+        self.nombre=nombre
+        self.id=id
+
+    def identificarse(self):
+        print(f"Nombre: {self.nombre}\nId: {self.id}")
+
+
+
+class Profesor(Persona):
+    def __init__(self, nombre, id,curso):
+        super().__init__(nombre, id)
+        self.curso=curso
+
+    def identificarse(self):
+        super().identificarse()
+        print(f"Curso: {self.curso}")
+
+    def agregar_nota(self,alumno_name,nota):
+        alumno_name.lista_nota.append(nota)
+        print(f"La nota {nota} se guardo correctamente")
+
+
+class Alumno(Persona):
+    
+    def __init__(self, nombre, id,curso,):
+        super().__init__(nombre, id)
+        self.curso=curso
+        self.lista_nota=[]
+
+    def identificarse(self):
+        super().identificarse()
+        print(f"Curso: {self.curso}")
+
+    def ver_notas(self):
+        if len(self.lista_nota)==0:
+            print("El profesor aun no ingresa ninguna nota.")
+        else:
+            index=1
+            for i in self.lista_nota:
+                print(f"{index}. {i}")
+                index+=1
+
+    def promedio(self):
+        
+        cantidad=len(self.lista_nota)
+        
+        total=sum(self.lista_nota)
+        
+        print(f"El promedio de las notas es: {total/cantidad}")
 
     
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+class Alumno(Persona):
+    def agregar_nota(self):
+        print(f"Solo los profesores pueden agregar notas")
+
+
+
+    
+
+
+        
+
+
+        
+
 
 
 
