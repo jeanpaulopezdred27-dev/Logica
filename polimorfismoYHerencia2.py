@@ -268,7 +268,7 @@ class Alimento(Producto):
         
     
 # Problema 8 con sistema escolar
-
+"""
 class Persona:
     
     def __init__(self, nombre,id):
@@ -327,24 +327,109 @@ class Alumno(Persona):
 
     
 
-
-
-
-
-
-
-
-
-
-
-
 class Alumno(Persona):
     def agregar_nota(self):
         print(f"Solo los profesores pueden agregar notas")
 
 
+"""
+# Problema 8 con sistema escolar
+
+class Persona:
+    def __init__(self,name,id):
+        self.name=name
+        self.id=id
+    
+    def identificarse(self):
+        print(f"Nombre: {self.name}\nID: {self.id}")
+    
+    def accion(self):
+        pass
+    
+
+class Maestro(Persona):
+    def __init__(self, name, id,materia):
+        super().__init__(name, id)
+        self.materia=materia
+    
+    def identificarse(self):
+        super().identificarse()
+        print(f"Curso: {self.materia}")
+
+    def accion(self):
+        while True:
+            clases=input("Ingresa si el profesor esta en clase(Si o NO)")
+            if clases.lower() =="si":
+                print(f"El profesor actualmente esta dando clases.")
+                break
+            elif clases.lower()=="no":
+                print(f"El profesor actualemte esta descansano en el area de descanso")
+                break
+            else: 
+                print(f"La variable {clases}, no es valida, por favor ingrese la variable si o no")
+    
+    def registrar_nota(self,nombre_alumno,nota=int):
+        nombre_alumno.lista_nota.append(nota)
+        print(f"La nota {nota} se subio a sistema correctamente.")
+    
+    def evaluar_alumno(self,nombre_alumno):
+        total=sum(nombre_alumno.lista_nota)
+        cantidad=len(nombre_alumno.lista_nota)
+
+        promedio=total/cantidad
+        if promedio >=18:
+            print(f"Tu promedio es: {promedio:.2f} tu estado es: EXCELENTE.")
+        elif promedio>=15:
+            print(f"Tu promedio es: {promedio:.2f} tu estado es: BUEN DESEMPEÑO.")
+        else:
+            print(f"Tu promedio es: {promedio:.2f} tu estado es: NECESITAS MEJORAR.")
+            
 
     
+
+class Alumno(Persona):
+        
+    def __init__(self, name, id,curso):
+        super().__init__(name, id)
+        self.curso=curso
+        self.lista_nota=[]
+
+    def identificarse(self):
+        super().identificarse()
+        print(f"Curso: {self.curso}")
+
+    def accion(self):
+        print(f"El alumno {self.name} esta actualmente en clases.")
+    
+    def ver_notas(self):
+        print(f"Las notas del alumno {self.name}  en el curso {self.curso} son : {self.lista_nota}")
+    
+    def calcular_promedio(self):
+        total=0
+        for nota in self.lista_nota:
+            total+=nota
+        promedio=total/len(self.lista_nota)
+        print(f"El promedio dell alumno {self.name} es: {promedio:.2f}:")
+
+print("Problema de alumno y profesor")
+maestro1=Maestro("Jean",2222,"Matematicas")
+alumno1=Alumno("Miguel",1111,"Matematicas")
+
+maestro1.identificarse()
+maestro1.accion()
+maestro1.registrar_nota(alumno1,12)
+maestro1.registrar_nota(alumno1,11)
+maestro1.registrar_nota(alumno1,11)
+maestro1.evaluar_alumno(alumno1)
+
+alumno1.accion()
+alumno1.identificarse()
+alumno1.ver_notas()
+alumno1.calcular_promedio()
+
+
+
+
 
 
         
