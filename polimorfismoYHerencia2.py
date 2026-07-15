@@ -413,19 +413,19 @@ class Alumno(Persona):
 
 print("Problema de alumno y profesor")
 maestro1=Maestro("Jean",2222,"Matematicas")
-alumno1=Alumno("Miguel",1111,"Matematicas")
+miguel=Alumno("Miguel lopez",1111,"Matematicas")
 
 maestro1.identificarse()
 maestro1.accion()
-maestro1.registrar_nota(alumno1,12)
-maestro1.registrar_nota(alumno1,11)
-maestro1.registrar_nota(alumno1,11)
-maestro1.evaluar_alumno(alumno1)
+maestro1.registrar_nota(miguel,12)
+maestro1.registrar_nota(miguel,11)
+maestro1.registrar_nota(miguel,11)
+maestro1.evaluar_alumno(miguel)
 
-alumno1.accion()
-alumno1.identificarse()
-alumno1.ver_notas()
-alumno1.calcular_promedio()
+miguel.accion()
+miguel.identificarse()
+miguel.ver_notas()
+miguel.calcular_promedio()
 
 
 
