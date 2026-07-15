@@ -36,3 +36,6 @@ print(f"El producto más caro es: {nuevo_orden[len(nuevo_orden)-1]["name"]}")
 mayor_precio=max(productos,key=lambda x:x["precio"]) #mayor precio seria todo el diccionario del producto más caro
 
 print(f"El producto con mayor precio es: {mayor_precio["name"]}")
+
+print(mayor_precio)
+print(nuevo_orden)
