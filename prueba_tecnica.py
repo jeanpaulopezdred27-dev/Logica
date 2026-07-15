@@ -20,6 +20,19 @@ productos = [
     {"name": "Teclado", "precio": 120, "stock": 5},
     {"name": "Monitor", "precio": 900, "stock": 2},
 ]
-index=0
+total=0
 for i in productos:
-    print(f" La cantidad  de {i["name"]}: {i["precio"] * i["stock"]}")        
+    total_producto=i["precio"] * i["stock"]
+    print(f" La cantidad  de {i["name"]}: {total_producto}")
+    total+=total_producto
+
+print(total)
+
+nuevo_orden= sorted(productos,key=lambda x:x["precio"])
+
+print(f"El producto más caro es: {nuevo_orden[len(nuevo_orden)-1]["name"]}")
+
+#tambien puede ser:
+mayor_precio=max(productos,key=lambda x:x["precio"]) #mayor precio seria todo el diccionario del producto más caro
+
+print(f"El producto con mayor precio es: {mayor_precio["name"]}")
