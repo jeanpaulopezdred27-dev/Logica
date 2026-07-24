@@ -1,0 +1,10 @@
+<data>
+    <name>Jean Paul Lopez Davila</name>
+    <age>24</age>
+    <birthday>27/10/2001</birthday>
+    <lenguajes>
+        <item>Python</item>
+        <item>Java</item>
+        <item>Rubi</item>
+    </lenguajes>
+</data>
